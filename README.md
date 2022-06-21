@@ -7,7 +7,7 @@ El presente repositorio corresponde al trabajo realizado para la tarea numero tr
 
 Cassandra corresponde a una base de datos NoSQL, pemitiendo un alto rendimiento debido a su escalabilidad, alto rendimiento de procesamiento y tolerancia a fallos.
 
-## INSTALACION
+## Instalacion
 
 --INSTALACION TAREA ANTERIOR, SE DEBE MODIFICAR--
 
@@ -25,7 +25,7 @@ En la carpeta general:
 ```bash
 docker-compose up -d
 ```
-## PREGUNTAS
+## Preguntas
 
 ### Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta? ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
 
