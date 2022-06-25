@@ -1,0 +1,32 @@
+version: '3'
+services:
+  cliente:
+    image: cliente
+    ports:
+      - 3000:3000
+    depends_on:
+      - cassandra-node1
+      - cassandra-node2
+      - cassandra-node3
+
+  cassandra-node1:
+    image: bitnami/cassandra:latest
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra-node1,cassandra-node2, cassandra-node3
+      - CASSANDRA_PASSWORD_SEEDER=yes
+    ports:
+      - 9042:9042
+      - 9160:9160
+
+  cassandra-node2:
+    image: bitnami/cassandra:latest
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra-node1,cassandra-node2, cassandra-node3
+  
+  cassandra-node3:
+    image: bitnami/cassandra:latest
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+      - CASSANDRA_SEEDS=cassandra-node1,cassandra-node2, cassandra-node3
