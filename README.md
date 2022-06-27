@@ -9,22 +9,17 @@ Cassandra corresponde a una base de datos NoSQL, pemitiendo un alto rendimiento 
 
 ## Instalacion
 
---INSTALACION TAREA ANTERIOR, SE DEBE MODIFICAR--
+Proceso de instalacion:
 
-En carpeta consumer:
+En carpeta general:
 ```bash
-docker build -t consumer
+docker build -t cliente 
 ```
 
-En carpeta producer:
-```bash
-docker build -t producer
-```
-
-En la carpeta general:
 ```bash
 docker-compose up -d
 ```
+
 ## Preguntas
 
 ### Explique la arquitectura que Cassandra maneja. Cuando se crea el clúster ¿Cómo los nodos se conectan? ¿Qué ocurre cuando un cliente realiza una petición a uno de los nodos? ¿Qué ocurre cuando uno de los nodos se desconecta? ¿La red generada entre los nodos siempre es eficiente? ¿Existe balanceo de carga?
